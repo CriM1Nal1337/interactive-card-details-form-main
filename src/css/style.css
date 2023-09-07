@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+body{
+    font-family: 'Space Grotesk', sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container .card{
+    background: no-repeat url(../images/bg-main-desktop.png);
+    height: 100vh;
+    width: 51%;
+    position: relative;
+}
+
+.card .card-front{
+    position: absolute;
+    top: 18.5rem;
+    left: 16.4rem;
+    width: 44.7rem;
+    height: 24.5rem;
+    background: no-repeat url(../images/bg-card-front.png);
+}
+
+.card-front .flag{
+    padding: 2.8rem 3rem 3rem 3.1rem;
+}
+
+.card-front .card-number{
+    font-size: 3.1rem;
+    font-weight: 500;
+    color: var(--White);
+    padding: 3rem 1rem 1rem 3rem;
+}
+
+.card-front .name-date{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3.2rem;
+    color: var(--White);
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.card .card-back{
+    background: no-repeat url(../images/bg-card-back.png);
+    position: absolute;
+    top: 46.8rem;
+    left: 25.7rem;
+    width: 44.7rem;
+    height: 24.5rem;
+}
+
+.card-back .cvc{
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10.9rem 2rem 2rem 35.8rem;
+}
+
+.container .card-right{
+    width: 49%;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 3.3rem 9.8rem;
+    max-width: 380px;
+}
+
+#form label{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin: 2.3rem 0 1rem;
+}
+
+#form input{
+    padding: 1.3rem 1.2rem;
+    width: 38rem;
+    border: 1px solid var(--Verydarkviolet);
+    border-radius: 0.8rem;
+}
+
+#form input::placeholder{
+    font-weight: bold;
+}
+
+#form #error-card-number{
+    font-size: 1.2rem;
+    color: var(--Red);
+    margin-top: 1rem;
+}
+
+#form .date-cvc{
+    display: flex;
+}
+
+#form .date-cvc .input-div{
+    display: flex;
+    flex-direction: column;
+}
+
+#form .date-cvc .input-div input{
+    width: 8rem;
+}
+
+#form .date-cvc .inputs{
+    display: flex;
+    gap: 1rem;
+}
+
+#form .date-cvc .input-div .error{
+    color: var(--Red);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1.1rem;
+}
+
+#form .date-cvc .input-div-cvc{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.9rem;
+}
+
+#form .date-cvc .input-div-cvc input{
+    width: 19.1rem;
+    
+}
+
+#form .date-cvc .input-div-cvc .error{
+    color: var(--Red);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1.1rem;
+}
+
+#form .btn{
+    width: 100%;
+    margin-top: 2.4rem;
+    background-color: var(--Verydarkviolet);
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--White);
+    padding: 1.8rem 0;
+}
+
+.hide{
+    display: none;
+}

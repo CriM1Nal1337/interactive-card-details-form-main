@@ -25,6 +25,7 @@ a{
   text-align: center;
   position: fixed;
   bottom: 25px;
+  left: 46%;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
