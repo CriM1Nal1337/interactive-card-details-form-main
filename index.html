@@ -17,37 +17,38 @@
     <div class="card">
       <div class="card-front">
         <img src="src/images/card-logo.svg" alt="flag" class="flag">
-        <p class="card-number">0000 0000 0000 0000</p>
+        <p class="card-number" id="card-numbers">0000 0000 0000 0000</p>
         <div class="name-date">
-          <p class="name">Jane Appleseed</p>
-          <p class="date">00/00</p>
+          <p class="name" id="card-name">Jane Appleseed</p>
+          <p class="date" ><span id="card-month">00</span>/<span id="card-year">00</span></p>
         </div>
       </div>
       <div class="card-back">
-        <p class="cvc">000</p>
+        <p class="cvc" id="card-cvc">000</p>
       </div>
     </div>
     <div class="card-right">
       <form action="submit" method="get" id="form">
         <label for="name" class="label">Cardholder Name</label>
-        <input type="text" class="input name" id="name">
+        <input type="text" class="name" id="name">
+        <span class="error hide">Your name here*</span>
         <label for="card-number" class="label">Card Number</label>
-        <input type="number" maxlength="16" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 16)" class="input card-name" id="card-name">
-        <span id="error-card-number" class="error hide">Wrong format, numbers only</span>
+        <input type="text" maxlength="19" class="input card-name" id="number" oninput="formatCardNumber(this)">
+        <span class="error hide">Your card number here*</span>
         <div class="date-cvc">
           <div class="input-div">
             <label for="date" class="label">Exp. Date (MM/YY)</label>
             <div class="inputs">
-              <input type="input number" max="12" maxlength="2" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 3)" class="mounth" id="mounth" placeholder="MM">
+              <input type="number" max="12" maxlength="2" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" class="mounth" id="mounth" placeholder="MM">
               <input type="number"
-                maxlength="2" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" class="input year" id="year" placeholder="YY">
+                maxlength="2" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2)" class="year" id="year" placeholder="YY">
             </div>
-            <span class="error hide">Can't be blank</span>
+            <span class="error hide" id="error-date">Can't be blank</span>
           </div>
           <div class="input-div-cvc">
             <label for="cvc"  class="label">CVC</label>
             <input type="number"maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 3)" class="input cvc" id="cvc" placeholder="e.g. 123">
-            <span class="error hide">Can't be blank</span>
+            <span class="error hide" id="error-cvc">Can't be blank</span>
           </div>
           
         </div>
