@@ -6,7 +6,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .container .card{
@@ -14,6 +13,7 @@ body{
     height: 100vh;
     width: 51%;
     position: relative;
+    background-size: contain;
 }
 
 .card .card-front{
@@ -83,8 +83,17 @@ body{
 #form input{
     padding: 1.3rem 1.2rem;
     width: 38rem;
-    border: 1px solid var(--Verydarkviolet);
+    border: 1px solid var(--Lightgrayishviolet);
     border-radius: 0.8rem;
+}
+
+#form input:focus{
+    border-color: var(--Lineargradient);
+}
+
+#form input:focus-visible{
+    color: var(--Lineargradient);
+    outline: none;
 }
 
 #form input::placeholder{
@@ -130,7 +139,6 @@ body{
 
 #form .date-cvc .input-div-cvc input{
     width: 19.1rem;
-    
 }
 
 #form .date-cvc .input-div-cvc .error{
@@ -152,6 +160,53 @@ body{
     cursor: pointer;
     color: var(--White);
     padding: 1.8rem 0;
+}
+
+.complete {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.complete .img{
+    width: 8rem;
+    margin-bottom: 4rem;
+}
+
+.complete .title{
+    font-size: 3.1rem;
+    letter-spacing: 0.5rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    color: var(--Verydarkviolet);
+}
+
+.complete .p{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--Darkgrayishviolet);
+}
+
+.complete .btn{
+    width: 100%;
+    margin-top: 2.4rem;
+    background-color: var(--Verydarkviolet);
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--White);
+    padding: 1.8rem 0;
+    width: 38rem;
+}
+
+.container .card-right.hide{
+    display: none;
 }
 
 .hide{

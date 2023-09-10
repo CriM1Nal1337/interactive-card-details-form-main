@@ -1,0 +1,109 @@
+@media (max-width: 1200px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .container .card{
+        background: no-repeat url(../images/bg-main-mobile.png);
+        max-height: 40rem;
+        background-size: cover;
+        width: 100%;
+    }
+
+    .card .card-front{
+        top: 42%;
+        left: 30%;
+        z-index: 1;
+    }
+
+    .card .card-back{
+        top: 10%;
+        left: 40%;
+        z-index: 0;
+    }
+}
+
+@media (max-width: 980px) {
+    .container .card{
+        max-height: 24.3rem;
+    }
+
+    .card .card-front{
+        width: 28.7rem;
+        height: 15.8rem;
+        border-radius: 1rem;
+        top: 50%;
+        left: 8%;
+        background-size: cover;
+    }
+
+    .card-front .flag{
+        padding: 1.9rem 0 0 2rem;
+        width: 7.5rem;
+    }
+
+    .card-front .card-number{
+        font-size: 2.1rem;
+        padding: 3rem 1rem 0rem 2rem;
+    }
+
+    .card-front .name-date{
+        font-size: 1.1rem;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+        padding: 1.2rem 2rem;
+    }
+
+    .card .card-back{
+        background-size: cover;
+        top: 10%;
+        left: 18%;
+        width: 28.7rem;
+        height: 15.8rem;
+        border-radius: 1rem;
+    }
+
+    .card-back .cvc{
+        font-size: 1.1rem;
+        padding: 7rem 0rem 0rem 23rem;
+    }
+
+    .container .card-right{
+        width: 49%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #form{
+        margin: 6.5rem 1rem 0 0;
+        max-width: 375px;
+    }
+
+    #form input{
+        padding: 1.3rem 1.2rem;
+        width: 32.5rem;
+    }
+
+
+    #form .date-cvc .input-div input{
+        width: 7rem;
+    }
+
+    #form .date-cvc .input-div-cvc input{
+        width: 100%;
+    }
+
+    .complete{
+        margin-top: 9rem;
+        width: 100%;
+    }
+
+    .complete .title{
+        color: var(--Verydarkviolet);
+    }
+
+    .complete .btn{
+        width: 33rem;
+    }
+}
