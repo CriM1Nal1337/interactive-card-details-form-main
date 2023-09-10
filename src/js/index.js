@@ -15,45 +15,46 @@ btn.addEventListener('click', (event) => {
     const cvc = document.getElementById('cvc')
     const cvcCard = document.getElementById('card-cvc')
     const errorCvc = document.getElementById('error-cvc')
+
+    errorName.classList.add('hide');
+    errorNumber.classList.add('hide');
+    errorDate.classList.add('hide');
+    errorCvc.classList.add('hide');
+    
     if (name.value === '') {
-        errorName.classList.remove('hide')
+        errorName.classList.remove('hide');
     } else {
-        cardName.textContent = name.value
-        errorName.classList.add('hide')
+        cardName.textContent = name.value;
     }
 
     if (number.value === '') {
         errorNumber.classList.remove('hide');
     } else {
-        errorNumber.classList.add('hide');
         const cleanedNumber = number.value.replace(/\s/g, '');
         const formattedNumber = cleanedNumber.match(/.{1,4}/g).join(' ');
         cardNumber.textContent = formattedNumber;
     }
 
     if (mounth.value === '') {
-        errorDate.classList.remove('hide')
+        errorDate.classList.remove('hide');
     } else if (mounth.value > 12 || mounth.value < 1) {
         errorDate.textContent = 'Please enter a valid month (1-12)';
         errorDate.classList.remove('hide');
     } else {
-        errorDate.classList.add('hide');
         mounthCard.textContent = mounth.value;
     }
-    
 
     if (year.value === '') {
-        errorDate.classList.remove('hide')
+        errorDate.classList.remove('hide');
     } else {
-        yearCard.textContent = year.value
-        errorDate.classList.add('hide')
+        yearCard.textContent = year.value;
     }
 
     if (cvc.value === '') {
-        errorCvc.classList.remove('hide')
-    } else {
-        cvcCard.textContent = year.value
-        errorCvc.classList.add('hide')
+        errorCvc.classList.remove('hide');
+    }
+    else {
+        cvcCard.textContent = cvc.value;
     }
 });
 
@@ -62,5 +63,3 @@ function formatCardNumber(input) {
     const formattedValue = cleanedValue.replace(/(\d{4}(?=\d))/g, '$1 ');
     input.value = formattedValue;
 }
-
-
